@@ -1,0 +1,10 @@
+<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.000000" height="60.000000" fill="none">
+	<defs>
+		<linearGradient id="paint_linear_0" x1="24.9403076" x2="24.9403076" y1="28.7121506" y2="0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(255,9,74)" offset="0" stop-opacity="0" />
+			<stop stop-color="rgb(255,9,74)" offset="1" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<rect id="ep:arrow-up-bold" width="59.999996" height="60.000004" x="0.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" transform="matrix(-1,8.74228e-08,-8.74228e-08,-1,60,60)" />
+	<path id="Vector" d="M1.09795 27.6142C1.80118 28.3172 2.75483 28.7122 3.7492 28.7122C4.74356 28.7122 5.69722 28.3172 6.40045 27.6142L24.9629 9.0517L43.5254 27.6142C44.2327 28.2973 45.18 28.6753 46.1632 28.6667C47.1464 28.6582 48.087 28.2638 48.7823 27.5685C49.4776 26.8732 49.8719 25.9327 49.8805 24.9495C49.889 23.9662 49.511 23.019 48.8279 22.3117L27.6142 1.09795C26.911 0.394932 25.9573 0 24.9629 0C23.9686 0 23.0149 0.394932 22.3117 1.09795L1.09795 22.3117C0.394933 23.0149 2.498e-15 23.9686 0 24.963C0 25.9573 0.394933 26.911 1.09795 27.6142Z" fill="url(#paint_linear_0)" fill-rule="nonzero" transform="matrix(-1,8.74228e-08,-8.74228e-08,-1,54.9629,47.4629)" />
+</svg>
