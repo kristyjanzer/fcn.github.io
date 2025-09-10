@@ -24,8 +24,8 @@
 }
 
 body {
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 18px;
+	font-weight: 400;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.2;
@@ -34,6 +34,7 @@ body {
 	color: $text;
 	padding: 0;
 	margin: 0;
+	background-color: $black;
 
 	input, textarea {
 		border: #666 1px solid;
@@ -97,10 +98,12 @@ button {
 }
 
 .container {
-	max-width: 1210px;
+	max-width: 1618px;
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 100%;
+	position: relative;
+	z-index: 10;
 }
 
 .button {
@@ -120,9 +123,210 @@ button {
 	}
 }
 
+section {
+	position: relative;
+	overflow: hidden;
+}
+
+.content {
+	margin-top: 80px;
+
+	&__wrap {
+		display: flex;
+		gap: 32px;
+	}
+
+	&__image {
+		position: absolute;
+		left: -15%;
+		top: 35%;
+		max-width: 800px;
+		height: auto;
+	}
+}
+
+.content-sidebar {
+	max-width: 282px;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 85px;
+}
+
+.sidebar-sections {
+	border-radius: 12px;
+	background: rgba(41, 41, 41, 0.8);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 5px;
+	min-height: 185px;
+
+	&__box {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		color: $text;
+		padding: 10px 0;
+
+		&:hover {
+			color: $accent;
+
+			svg path {
+				fill: $accent;
+				stroke: $accent;
+			}
+		}
+
+		&--active {
+			color: $accent;
+
+			svg path {
+				fill: $accent;
+				stroke: $accent;
+			}
+		}
+	}
+
+	&__icon {
+		max-width: 20px;
+		font-size: 0;
+	}
+}
+
+.sidebar-raiting {
+	box-sizing: border-box;
+	border: 1px solid rgba(217, 217, 217, 0.5);
+	border-radius: 12px;
+	padding: 28px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&__title {
+		font-weight: 600;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 27px;
+	}
+
+	&__info {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		gap: 21px;
+	}
+
+	&__text {
+		max-width: 110px;
+		min-width: 110px;
+	}
+
+	&__number {
+		font-size: 24px;
+		line-height: 100%;
+		font-weight: 500;
+		color: $accent;
+	}
+
+}
+
+.content-box {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.content-description {
+	&__title {
+		font-size: 36px;
+		font-weight: 500;
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		font-size: 20px;
+
+		&--colored {
+			color: $primary;
+			font-weight: 500;
+		}
+
+		& + & {
+			padding-top: 20px;
+		}
+	}
+}
 
 
+.content-items{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+	position: relative;
 
+	&__image {
+		position: absolute;
+		right: -30%;
+		top: 10%;
+		max-width: 830px;
+	}
+
+	&__row {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 100%;
+		background-color: transparent;
+		padding: 30px 40px;
+		border: 1px solid rgba(255, 255, 255, 1);
+		border-radius: 12px;
+	}
+
+	&__icon {
+		width: 60px;
+		height: 60px;
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		font-size: 32px;
+		font-weight: 500;
+	}
+
+	&__text {
+		font-size: 20px;
+	}
+}
+
+.main-button {
+	min-width: 310px;
+	font-size: 24px;
+	line-height: 100%;
+	font-weight: 500;
+	border-radius: 12px;
+	background: $accent;
+	padding: 15px;
+	text-align: center;
+	transition: .3s all ease;
+	color: $text;
+	width: max-content;
+
+	&:hover {
+		box-shadow: inset 0 0 0 35px rgba(255, 255, 255, .1);
+	}
+}
 
 
 /************* Media *****************************/
