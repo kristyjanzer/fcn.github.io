@@ -26,3 +26,4 @@ burgerMenu.addEventListener("click", (e) => {
 });
 
 $(".header-info").clone().appendTo(".header-button-menu__body");
+
