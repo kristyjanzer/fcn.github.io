@@ -1,7 +1,23 @@
 // Open menu
-$(function() {
-    $('.header-menu-more').click(function() {
-      $(this).toggleClass('active');
+const menuItems = document.querySelectorAll('.header-menu-more');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.stopPropagation();
+
+        const isActive = item.classList.contains('active');
+
+        menuItems.forEach(i => i.classList.remove('active'));
+
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!item.contains(e.target)) {
+            item.classList.remove('active');
+        }
     });
 });
 

@@ -19,7 +19,7 @@
 }
 
 ::selection {
-	background-color: $accent;
+	background-color: transparent;
 	color: $white;
 }
 
@@ -1044,7 +1044,7 @@ section {
 		}
 
 		&__arrows {
-			max-width: 325px;
+			max-width: 315px;
 			margin-left: 30px;
 			padding: 5px 0;
 		}
@@ -1062,7 +1062,7 @@ section {
 	}
 
 	.quote {
-		padding: 90px;
+		padding: 90px 20px;
 		margin-left: -20px;
         margin-right: -20px;
 
@@ -1080,12 +1080,12 @@ section {
 			
 			&::before {
 				top: -50px;
-				left: 0;
+				left: 30px;
 			}
 
 			&::after {
 				top: inherit;
-				right: 0;
+				right: 30px;
 				bottom: -45px;
 			}
 		}
