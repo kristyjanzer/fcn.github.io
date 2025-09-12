@@ -45,21 +45,21 @@ $(".header-info").clone().appendTo(".header-button-menu__body");
 
 
 
-// Finishing Slider
-$('.finishing-slider').slick({
+// Slider
+$('.content-ranks-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
     arrows: false,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1400,
           settings: {
             dots: true,
             arrows: false,
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
         },
       }
     ]
-  });
+});
