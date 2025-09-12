@@ -477,6 +477,10 @@ section {
 	}
 }
 
+.overflow-h {
+	overflow: hidden;
+}
+
 .title {
 	font-size: 32px;
 	font-weight: 500;
@@ -1209,7 +1213,7 @@ section {
 	}
 
 	.content {
-		margin-top: 80px;
+		margin-top: 18px;
 
 		&::before {
 			display: none;
@@ -1258,6 +1262,10 @@ section {
 		width: calc(100% - 40px);
 		z-index: 10;
 		top: 85px;
+
+		& + .content {
+			margin-top: 80px;
+		}
 	}
 
 	.content-box__battle, 
