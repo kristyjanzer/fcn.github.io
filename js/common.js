@@ -76,12 +76,11 @@ $('.content-ranks-slider').slick({
 
 
 
-
+// Rating Info Slider
 const $slider = $('.rating-info-slider');
 const $pagination = $('.slider-pagination');
-const visibleNumbers = 2; // Количество видимых номеров с каждой стороны
+const visibleNumbers = 2;
 
-// Rating Info Slider
 $('.rating-info-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -97,31 +96,25 @@ $('.rating-info-slider').slick({
 
 let totalSlides = $slider.slick("getSlick").slideCount;
 
- // Создаем пагинацию
  function createPagination(currentSlide) {
  $pagination.empty();
  
- // Определяем границы отображения
  const start = Math.max(1, currentSlide - visibleNumbers);
  const end = Math.min(totalSlides, currentSlide + visibleNumbers);
  
- // Добавляем точки в начале, если нужно
  if (start > 1) {
  $pagination.append('<span class="dots">...</span>');
  }
  
- // Добавляем номера
  for(let i = start; i <= end; i++) {
  createDot(i);
  }
  
- // Добавляем точки в конце, если нужно
  if (end < totalSlides) {
  $pagination.append('<span class="dots">...</span>');
  }
  }
 
- // Создаем отдельный элемент пагинации
  function createDot(number) {
  const $dot = $('<div class="dot">' + number + '</div>');
  $dot.click(function() {
@@ -131,14 +124,12 @@ let totalSlides = $slider.slick("getSlick").slideCount;
  $pagination.append($dot);
  }
 
- // Обновляем пагинацию
  function updatePagination() {
  const currentSlide = $slider.slick("slickCurrentSlide") + 1;
  createPagination(currentSlide);
  updateActiveDot();
  }
 
- // Обновляем активный элемент
  function updateActiveDot() {
  const currentSlide = $slider.slick("slickCurrentSlide") + 1;
  $pagination.find('.dot').removeClass('active');
@@ -150,21 +141,17 @@ let totalSlides = $slider.slick("getSlick").slideCount;
  }
  }
 
- // Инициализация
  updatePagination();
 
- // Обработка смены слайда
  $slider.on('afterChange', function(event, slick, currentSlide) {
  updatePagination();
  });
 
- // Обновление при изменении количества слайдов
  $slider.on('init reInit', function() {
  totalSlides = $slider.slick("getSlick").slideCount;
  updatePagination();
  });
 
- // Обработка ошибок
  $slider.on('error', function(message) {
  console.error('Slick error:', message);
  });
